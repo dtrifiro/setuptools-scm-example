@@ -1,13 +1,13 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+requires = ["wheel", "setuptools>=45", "setuptools_scm[toml]>=6.2"]
 
 [project]
-name = "matricidadde"
-version = "0.0.1"
-dependencies = [
-    "numpy"
-]
+name = "setuptools-scm-example"
+description = "Example project with setuptools scm versioning"
+dynamic = ["version"]
 
+[project.scripts]
+example-main = "setuptools_scm_example.main:main"
 
 [tool.setuptools_scm]
-write_to = "_version.py"
+write_to = "src/setuptools_scm_example/_version.py"
